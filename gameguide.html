@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About my Game</title>
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="" href="css/dark.css">
+</head>
+<body>
+    <div id="content">
+        <div id="banner">
+            <h1>My Game</h1>
+            <a href="about.html">About Me</a> |
+            <a href="gameguide.html" onclick="refresh()">Adventurist</a> |
+            <a href="index.html">Home Page</a> |
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+        
+        <div id="blogposts">
+            <div class="post">
+                <h2>Play My Game</h2>
+                <p>Adventurist is a game about where the main goal is to get to school but it doesn't force you on one single story path. You can go on multiple adventures and 
+                    explore multiple different areas of the game. You can purchase items with in-game money and the game isn't p2w. You can play the game at your own pace and
+                    there's no unnecessary dialogue.</p>
+                <p>Click <a href="NewSchoolProject/SchoolProject/index.html">Here</a> to play.</p>
+            </div>
+        </div>
+        <div id="mechanics">
+            <h2>Game Mechanics</h2>
+            <p>The most important game mechanics in Adventurist are gold and reputation. With gold you can basically do anything as you can buy anything from npcs which will greatly help you
+                with gameplay. Reputation also matters too as if you have a low amount of reputation you won't be able to purchase from npcs and you'll be targeted by certain npcs. In the 
+                marketplace there's a building and inside that building there's an npc which resets your reputation for gold. You can check your reputation by talking to certain npcs on the map.
+            </p>
+        </div>
+        <div class="post">
+            <h2>Gallery</h2>
+            <div class="Gallery">
+                <a href="img/Gamescreen.png"> <img src="img/Gamescreen.png" alt=""> </a>
+                <a href="/img/Bridge.png"> <img src="img/Bridge.png" alt=""> </a>
+                <a href="img/MagicFeather.png"> <img src="img/MagicFeather.png" alt=""> </a>
+                <a href="/img/BankGuy.png"> <img src="img/BankGuy.png" alt=""> </a>
+                <a href="img/InsideBoulderPass.png"> <img src="img/InsideBoulderPass.png" alt=""> </a>
+            </div>
+        </div>
+    <div>
+</body>
+
+<script>
+
+    var lightMode = true
+
+    function changeSheet() {
+        // make lightMode equal NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet")
+        var darkSheet = document.getElementById("darkSheet")
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+}
+
+function refresh() {
+    alert("Page Refreshed")
+}
+
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil</title>
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="" href="css/dark.css">
+</head>
+<body>
+    <div id="content">
+        <div id="banner">
+            <h1>My Life</h1>
+            <a href="about.html" onclick="refresh()">About Me</a> |
+            <a href="gameguide.html">Adventurist</a> |
+            <a href="index.html">Home Page</a> |
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+        
+        <div id="blogposts">
+            <div class="post">
+                <h2>About Me</h2>
+                <p>My name is Emil Sanchez and I'm 14 years old. I like swimming, learning about natural disasters, hanging out with friends, and playing video games. I watch YouTube
+                and anime when I'm bored. I usually watch anime about action and fighting. I watch animes like One Piece, Bleach, HxH, etc. I mostly play games on Roblox. I've lived
+                almost half of my life in Pennsylvania and I used to live in Puerto Rico which I moved from 2 months before Hurricane Maria hit.</p>
+            </div>
+            <div id="education">
+                <h2 class="eduH">Education and Life Goals</h2>
+                <p>The reason which I went to York Tech is because of the technical programs and the stuff I will learn from these programs. I want to use my education so I can learn more about
+                    how computers work and how to use them in daily life. With my skill I want to make programs/technology which will benifit people around the world. I don't currently have my
+                mind set on a singular job which I want to do but it'll probably be in cyber security or programming. I am currently a freshman and I am graduating in 2027.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    var lightMode = true
+
+    function changeSheet() {
+        // make lightMode equal NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet")
+        var darkSheet = document.getElementById("darkSheet")
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+}
+
+function refresh() {
+    alert("Page Refreshed")
+}
+
+</script>
+
+</html>

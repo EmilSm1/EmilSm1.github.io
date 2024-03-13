@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medallion</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Emil's Website</title>
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="" href="css/dark.css">
 </head>
+
 <body>
-    <div>
-        <h1>Medallions</h1>
-        <p>Click the medallion</p>
-        <a href="SchoolProject/index.html">
-            <img src="img/download3.jpg" alt="Oscars Medallion">
-        </a>
+    <div id="content">
+        <div id="banner">
+            <h1>Emil's Website</h1>
+            <a href="about.html">About Me</a> |
+            <a href="gameguide.html">Adventurist</a> |
+            <a href="index.html" onclick="refresh()">Home Page</a> |
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+
+    <div id="blogposts">
+            <div class="post">
+                <h2>About Me</h2>
+                <p>My name is Emil Sanchez and I like using computers. I attend York Tech and I am a freshman(when I made this website) and graduate in 2027.</p>
+                <p>Click <a href="about.html">here</a> to learn more.</p>
+            </div>
+            <div class="post">
+                <h2 style="display: inline">Get To School</h2>
+                <img src="img/Gamescreen.png" alt="Gamescreen" class="imgLeft imgBlog">
+                <p>Adventurist is a game about getting to school while having other side quest/options to do throught your adventures.  </p>
+                <p>Click <a href="NewSchoolProject/SchoolProject/index.html">here</a> to play.</p>
+            </div>
+        </div>
+
     </div>
+
+<script>
+
+    var lightMode = true
+
+    function changeSheet() {
+        // make lightMode equal NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet")
+        var darkSheet = document.getElementById("darkSheet")
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+}
+
+function refresh() {
+    alert("Page Refreshed")
+}
+
+</script>
+
 </body>
+
 </html>
